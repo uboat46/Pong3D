@@ -1,0 +1,26 @@
+{
+  "name": "pong-3d",
+  "version": "1.0.0",
+  "description": "Pong 3d game server",
+  "main": "dist/index.js",
+  "scripts": {    
+    "build": "tsc",
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/Server.js",
+    "watch": "concurrently \"yarn run watch-ts\" \"yarn run watch-node\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^14.11.2",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.3"
+  },
+  "dependencies": {
+    "@types/express": "^4.17.8",
+    "@types/socket.io": "^2.1.11",
+    "concurrently": "^5.3.0",
+    "express": "^4.17.1",
+    "nodemon": "^2.0.4",
+    "socket.io": "^2.3.0"
+  }
+}
