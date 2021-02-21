@@ -91,4 +91,11 @@ Las interacciones entre jugadores y servidor se manejan utilizando `websockets` 
 - Las conexiones entre servidor y jugadores aún son un trabajo en progreso (WIP).
 ```
 
+# Siguientes pasos
+
+- [] Añadir conexiones con websockets
+- [] Probar mensajes entre servidor e instancias de juego
+- [] Agregar interfaz del juego
+- [] Añadir sincronización de juego entre dos jugadores
+
 
