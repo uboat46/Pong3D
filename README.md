@@ -95,9 +95,9 @@ Las interacciones entre jugadores y servidor se manejan utilizando `websockets` 
 
 - [x] Implementar interfaces de objetos
 - [x] Extender físicas del juego n los objetos
-- [] Añadir conexiones con websockets
-- [] Probar mensajes entre servidor e instancias de juego
-- [] Agregar interfaz del juego
-- [] Añadir sincronización de juego entre dos jugadores
+- [ ] Añadir conexiones con websockets
+- [ ] Probar mensajes entre servidor e instancias de juego
+- [ ] Agregar interfaz del juego
+- [ ] Añadir sincronización de juego entre dos jugadores
 
 
