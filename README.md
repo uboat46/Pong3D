@@ -81,17 +81,14 @@ El servidor se encarga de levantar una instancia de juego para cada nuevo juego.
 
 El servidor se encarga de manejar las interacciones entre los distintos jugadores y su instancia de juego. Los eventos entre servidor e instancia de juego se manejan a través de una cola de mensajes.
 
+```diff
+- Las conexiones y eventos entre servidor e instancias de juego aún son un trabajo en progreso (WIP).
+```
+
 Las interacciones entre jugadores y servidor se manejan utilizando `websockets` para mantener un flujo constante de eventos.
 
-<div style="color:red;text-align:center;">
-  <blockquote>
-    Las conexiones y eventos entre servidor e instancias de juego aún son un trabajo en progreso (WIP).
-  </blockquote>
-  <br>
-  <blockquote>
-    Las conexiones entre servidor y jugadores aún son un trabajo en progreso.
-  </blockquote>
-</div>
-
+```diff
+- - Las conexiones entre servidor y jugadores aún son un trabajo en progreso (WIP).
+```
 
 
