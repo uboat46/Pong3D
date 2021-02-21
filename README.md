@@ -61,6 +61,7 @@ isColliding(object: GameObject): boolean {
 
 Dónde para cada dimensión, se puede checar su colisión con otro objeto usando el siguiente algoritmo.
 
+> Ejemplo para la dimensión `y`
 ```ts
 isCollidingY(object: GameObject): boolean {
   const minValue = this.position.y - this.size.y
@@ -71,7 +72,25 @@ isCollidingY(object: GameObject): boolean {
   return minValue <= objectMaxValue && maxValue >= objectMinValue
 }
 ```
-> Ejemplo para la dimensión `y`
 
----
+---  
+
+# Servidor de Juegos (WIP)
+
+El servidor se encarga de levantar una instancia de juego para cada nuevo juego. Cada instancia será manejada por un trabajador asíncrono que maneja el estado del juego y los eventos dentro del mismo.
+
+El servidor se encarga de manejar las interacciones entre los distintos jugadores y su instancia de juego. Los eventos entre servidor e instancia de juego se manejan a través de una cola de mensajes.
+
+Las interacciones entre jugadores y servidor se manejan utilizando `websockets` para mantener un flujo constante de eventos.
+
+<div style="color:red;text-align:center;">
+  <p>
+    Las conexiones y eventos entre servidor e instancias de juego aún son un trabajo en progreso (WIP).
+  </p>
+  <p>
+    Las conexiones entre servidor y jugadores aún son un trabajo en progreso.
+  </p>
+</div>
+
+
 
