@@ -88,7 +88,7 @@ El servidor se encarga de manejar las interacciones entre los distintos jugadore
 Las interacciones entre jugadores y servidor se manejan utilizando `websockets` para mantener un flujo constante de eventos.
 
 ```diff
-- - Las conexiones entre servidor y jugadores aún son un trabajo en progreso (WIP).
+- Las conexiones entre servidor y jugadores aún son un trabajo en progreso (WIP).
 ```
 
 
