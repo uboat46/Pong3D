@@ -1,39 +1,23 @@
 # Pong3D
-Código para un juego de Pong3D multijugador distribuido usando Typescript.
-
----
-
-El siguiente repositorio trata de montar un Servidor con multiples juegos asíncronos de Pong3D. Todos los archivos se encuentran bajo la carpeta [/src](./src) y están escritos en Typescript.
-
----
-
-## TL/DR
-Para correr el proyecto utiliza los siguientes comandos.
-
-```console
-# Instalar dependencias
-> yarn
-
-# Correr el servidor del juego y observar cambios en los archivos
-> yarn watch
-```
+Este repositorio incluye el código para un juego de Pong3D multijugador distribuido usando Typescript.
+Todos los archivos se encuentran bajo la carpeta [/src](./src) y están escritos en Typescript.
 
 ---
 ---
 
 ## Sobre Pong3D  
 
-El juego de Pong3D consiste en dos jugadores y un balón dentro de un cubo, dónde el balón se encuentra en constante movimiento. Cada jugador tiene la posibilidad de anotar puntos al interactuar con el balón. Un punto es considerado cúando el balón toca la pared adyacente al jugador.
-
+El juego de Pong3D consiste en anotar la mayor cantidad de puntos utilizando un balón. Dos jugadores y el balón se encuentran dentro de un cubo en el cual el balón se encuentra en constante movimiento.
+Cada jugador tiene la posibilidad de anotar puntos al interactuar con el balón. Un punto es considerado cúando el balón toca la pared adyacente al jugador.
 Un juego consiste en un determinado tiempo para jugar. Durante este tiempo dos jugadores intentan conseguir la mayor cantidad de puntos. El jugador con más puntos al final del juego se considera el ganador.
 
-La cámara del juego es dinámica ya que rotará sobre el eje x. En su rotación expondrá a los jugadores con cuatro distintas vistas del juego representadas por las caras del cubo. Dentro de el arreglo de posibles caras se encunetran los pares `[1, 3]` y `[2, 4]`.  
+La cámara del juego es dinámica ya que rotará sobre el eje x. En su rotación expondrá a los jugadores con cuatro distintas vistas del juego representadas por las caras del cubo. Dentro del arreglo de posibles caras se encunetran los pares `[1, 3]` y `[2, 4]`.  
 
 ![Representación de camaras y el juego](./assets/camara-juego.jpeg) 
 
 ---
 
-# Físicas del Juego
+# Mecánicas del Juego
 
 ### Posición  
 
@@ -43,13 +27,13 @@ Los objetos del juego son cajas en tres dimensiones. Al estar en tres dimensione
 
 ### Tamaño  
 
-Además contienen un arreglo de escalas para cada una de las dimensiones. Estas escalas nos proporcionan el tamaño del objeto en cada una de las dimensiones.
+Los objetos del juego contienen un arreglo de escalas para cada una se sus tres dimensiones que proporcionan su tamaño en relación a la dimensión a la cual estan relacionados.
 
 ![Tamaños de los objetos](./assets/escala-objeto.jpeg)  
 
 ## Colisiones 3D
 
-Se puede saber si un objeto esta colisionando con otro utilizando el siguiente [algoritmo](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection#aabb_vs._aabb).
+Se puede saber si un objeto esta colisionando con otro utilizando el siguiente [algoritmo](https://developer.mozilla.org/en-US/docs/Games/Techniques/3D_collision_detection#aabb_vs._aabb):
 
 ```ts
 isColliding(object: GameObject): boolean {
@@ -59,9 +43,9 @@ isColliding(object: GameObject): boolean {
 }
 ```
 
-Dónde para cada dimensión, se puede checar su colisión con otro objeto usando el siguiente algoritmo.
+Donde para cada dimensión, se puede checar su colisión con otro objeto usando el siguiente algoritmo.
 
-> Ejemplo para la dimensión `y`
+> Ejemplo para la dimensión `y`:
 ```ts
 isCollidingY(object: GameObject): boolean {
   const minValue = this.position.y - this.size.y
@@ -89,6 +73,17 @@ Las interacciones entre jugadores y servidor se manejan utilizando `websockets` 
 
 ```diff
 - Las conexiones entre servidor y jugadores aún son un trabajo en progreso (WIP).
+```
+
+## Ejecución
+Para ejecutar el proyecto utiliza los siguientes comandos:
+
+```console
+# Instalar dependencias
+> yarn
+
+# Correr el servidor del juego y observar cambios en los archivos
+> yarn watch
 ```
 
 # Siguientes pasos
